@@ -1,0 +1,120 @@
+*{
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 10px;
+}
+
+body{
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* --- Mobile First --- */
+.left-col{
+    background: #5200FF;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+.left-col:before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/bg.jpeg');
+    background-size: cover;
+    background-image: 100%;
+    opacity: .22;
+}
+
+.content{
+    position: relative;
+}
+
+.left-col, .right-col{
+    padding: 10.8rem 8vw;
+}
+
+h1{
+    margin: 0;
+    font-family:'Bebas Neue';
+    font-weight: normal;
+    text-transform: uppercase;
+    font-size: 6.4rem;
+    line-height: 1.2em;
+}
+
+p{
+    font-size: 2.4rem;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+
+label{
+    display: block;
+    font-size: 1.8rem;
+    margin-bottom: 1.4rem;
+}
+
+input{
+    width: 100%;
+    background: #EDEDED ;
+    border: 1px solid #C7C7C7;
+    font-size: 1.6rem;
+    padding: 1.2rem;
+    outline: none;
+    margin-bottom: 2.5em;
+
+}
+
+button{
+    font-size: 1.8rem;
+    width: 100%;
+    background: #5200FF;
+    padding: 1em;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* --- Small Tablet Version --- */
+@media only screen and (min-width: 770px){
+    .form{
+        display: grid;
+        grid-template-columns: repeat(2,auto);
+        gap: 2em;
+    }
+
+    button{
+        width: auto;
+        padding: 1em 2.5em
+    }
+}
+
+@media only screen and (min-width: 1260px){
+    body{
+        display: flex;
+    }
+    .left-col, .right-col{
+        /*Each colum will fill the same */
+        flex-basis: 0; /*Initial size of flex items*/
+        flex-grow: 1; /* Will grow the same*/
+        height: 100vh;
+        /*For the vertical aligment grid -> Inside each colum we have a unique div content*/
+        display: grid;
+        place-items: center;
+    }
+
+    .left-col{
+        text-align: right;
+    }
+
+
+
+
+}
